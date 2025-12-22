@@ -1,0 +1,106 @@
+<style>
+  /* Navbar */
+  .navbar {
+    background-color: #fff;
+  }
+
+  .fa-compass {
+    color: #ff385c;
+    font-size: 1.7rem;
+  }
+
+  /* CENTER SEARCH */
+  .navbar-center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .search-input {
+    border-radius: 999px 0 0 999px;
+    padding: 0.45rem 0.9rem;   /* 👈 reduced height */
+    min-width: 260px;
+    font-size: 0.95rem;
+  }
+
+  .search-btn {
+    border-radius: 0 999px 999px 0;
+    background-color: #ff385c;
+    color: white;
+    padding: 0.45rem 1rem;   /* 👈 reduced height */
+    font-size: 0.9rem;
+  }
+
+  .search-btn:hover {
+    background-color: #e03150;
+    color: white;
+  }
+
+  /* Links */
+  .nav-link {
+    color: #222 !important;
+    font-weight: 500;
+  }
+</style>
+
+<nav class="navbar navbar-expand-md sticky-top shadow-sm">
+  <div class="container-fluid px-4 position-relative">
+
+    <!-- LEFT -->
+    <div class="d-flex align-items-center">
+      <a class="navbar-brand me-2" href="/listings">
+        <i class="fa-regular fa-compass"></i>
+      </a>
+      <a class="nav-link fw-medium" href="/listings">Explore</a>
+    </div>
+
+    <!-- CENTER SEARCH -->
+    <div class="navbar-center d-none d-md-block">
+      <form class="d-flex align-items-center" role="search" action="/listings" method="GET">
+        <input
+          class="form-control search-input"
+          type="search"
+          name="q"
+          placeholder="Search destinations"
+          aria-label="Search"
+        />
+        <button class="btn search-btn" type="submit">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </form>
+    </div>
+
+    <!-- TOGGLER -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- RIGHT -->
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav align-items-center gap-2">
+        <li class="nav-item">
+          <a class="nav-link" href="/listings/new">Airbnb your home</a>
+        </li>
+
+        <% if (!currUser) { %>
+          <li class="nav-item">
+            <a class="nav-link fw-bold" href="/signup">Sign Up</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-bold" href="/login">Log in</a>
+          </li>
+        <% } else { %>
+          <li class="nav-item">
+            <a class="nav-link fw-bold" href="/logout">Log out</a>
+          </li>
+        <% } %>
+      </ul>
+    </div>
+
+  </div>
+</nav>
