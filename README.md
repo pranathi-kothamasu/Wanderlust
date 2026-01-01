@@ -36,7 +36,7 @@ Wanderlust is a full-stack Airbnb-inspired web application that allows users to 
 ## Project Architecture (MVC)
 This project follows the **MVC (Model-View-Controller)** design pattern for clean separation of concerns.
 
-MAJOR_PROJECT/
+##MAJOR_PROJECT/
 │
 ├── models/ # Mongoose schemas (User, Listing, Review)
 ├── controllers/ # Business logic for routes
@@ -75,13 +75,13 @@ MAJOR_PROJECT/
 
 ## Installation & Setup
 
-#bash
+##bash
 git clone https://github.com/your-username/Wanderlust.git
 cd Wanderlust
 npm install 
 
 
-#Create a .env file:
+##Create a .env file:
 
 ATLASDB_URL=your_mongodb_atlas_url
 CLOUD_NAME=your_cloudinary_name
@@ -90,22 +90,22 @@ CLOUD_API_SECRET=your_cloudinary_secret
 MAP_TOKEN=your_maptiler_token
 
 
-#Run the application:
+##Run the application:
 nodemon app.js
 
 
-#Open in browser:
+##Open in browser:
 http://localhost:8080
 
-#Deployment
+##Deployment
 The application is deployed and connected to MongoDB Atlas with cloud-based image storage and map services.
 
-#Future Improvements
+##Future Improvements
 -Booking & availability system
 -Wishlist functionality
 -Admin dashboard
 -Advanced search with price range
 -Pagination & performance optimizations
 
-#Author
+##Author
 Pranathi Kothamasu
