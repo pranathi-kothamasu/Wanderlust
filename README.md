@@ -76,7 +76,7 @@ This project follows the **MVC (Model-View-Controller)** design pattern for clea
 ## Installation & Setup
 
 ##bash
-git clone https://github.com/your-username/Wanderlust.git
+git clone https://github.com/pranathi-kothamasu/Wanderlust.git
 cd Wanderlust
 npm install 
 
